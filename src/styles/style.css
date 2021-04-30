@@ -1,0 +1,107 @@
+.hero.has-background {
+  position: relative;
+
+  overflow: hidden;
+}
+.hero-background {
+  /* Set up proportionate scaling */
+  position: absolute;
+  width: 100%;
+
+  width: 100vw;
+  height: 100vh;
+}
+.img-hero {
+  object-fit: fill;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero-background.is-transparent {
+  opacity: 1;
+}
+
+body {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+}
+
+/* scrool with effect */
+html {
+  scroll-behavior: smooth;
+}
+
+nav.navbar.is-fixed-top {
+  transition: background-color 0.5s, backdrop-filter 0.5s ease-out;
+
+  backdrop-filter: blur(0px);
+  background-image: linear-gradient(45deg, #ffffffaa, rgba(255, 255, 255, 0));
+  background-color: #d1eef9;
+}
+
+nav.navbar.is-fixed-top.is-active {
+  transition: background-color 1s, backdrop-filter 0.25s ease-out;
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+}
+
+.is-primary {
+  background-color: #183051 !important;
+}
+
+.bordered {
+  font-size: 0.85em;
+  font-weight: 500;
+  border: solid;
+  border-color: #183051 !important;
+  color: #183051 !important;
+  border-radius: 15px !important;
+  border-width: 2px !important;
+  box-shadow: none;
+  text-align: center;
+  justify-content: center !important;
+  align-content: center !important;
+  flex-direction: column !important;
+}
+.bordered svg,
+.bordered img,
+.bordered .icon {
+  vertical-align: middle;
+  margin: 0.2em 5px 0.2em 5px;
+}
+.bordered a {
+  color: inherit;
+}
+
+.bordered .email {
+  vertical-align: middle;
+  margin: 0em 0em 0.2em 0em;
+  padding-left: 1em;
+  padding-right: 1em;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.carousel-list .carousel-slides .carousel-slide {
+  position: sticky;
+  top: 25%;
+  height: 100%;
+  /* transform: translateY(5%); */
+}
+
+@keyframes animateReassurence {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+.carousel-list .carousel-slides .carousel-slide {
+  animation-duration: 15s;
+  animation-name: animateReassurence;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

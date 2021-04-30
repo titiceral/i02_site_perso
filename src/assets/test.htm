@@ -1,0 +1,76 @@
+
+
+<html>
+<head>
+    <style>
+ .bg {
+  background-image: url('https://images.unsplash.com/photo-1476820865390-c52aeebb9891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh
+  
+  height: 100vh;
+  width: 100vw;
+}
+
+
+    </style>
+<style>
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.fixed-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+right :0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+}
+
+.myimg {
+    height: inherit;
+object-fit:cover;
+}
+
+.object-fit_fill { object-fit: fill }
+.object-fit_contain { object-fit: contain }
+.object-fit_cover { object-fit: cover }
+.object-fit_none { object-fit: none }
+.object-fit_scale-down { object-fit: scale-down }
+
+html { 
+  color: #eee; 
+
+  font-family: 'Source Code Pro', Monaco;
+  background-color: #333;
+}
+
+p { font-weight: 200; font-size: 13px; margin-bottom: 10px; margin-top: 0;
+}
+
+img { height: 100%;background-color: #444;}
+
+img[class] { 
+  width: 100%;
+}
+
+
+.image {
+  float: left;
+  width: 100%;
+  
+ width:100vw;
+ height:100vh;
+}
+</style>
+
+<div class="image">
+ 
+<img class="object-fit_fill" src="fond_1.png">
+</div>

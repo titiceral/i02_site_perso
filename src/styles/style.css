@@ -8,13 +8,20 @@
   position: absolute;
   width: 100%;
 
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh;*/
 }
 .img-hero {
   object-fit: fill;
   width: 100vw;
   height: 100vh;
+}
+
+.img-hero-cover {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
 }
 
 .hero-background.is-transparent {

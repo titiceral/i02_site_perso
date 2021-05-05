@@ -1,171 +1,134 @@
 <template>
-  <div ref="canvas" id="centeredDiv">
-    <v-chart class="chart" :option="option" />
+  <div>
+    <div class="hero-background">
+      <img
+        alt="cibler votre besoin"
+        class="is-transparent img-hero-cover"
+        src="../assets/target_blue.jpg"
+      />
+    </div>
+    <div class="hero-body" id="RadarMousePosRef">
+      <div class="container has-text-left">
+        <p class="title mt-5">Cibler votre besoin</p>
+        <div class="columns has-text-centered">
+          <div class="column">
+            <radar
+              unit="ans"
+              title="Langages : Années d'Expérience"
+              :max="this.maxYears"
+              :indicatorsNames="this.languagesLabels"
+              :staticValues="
+                this.valuesFromCompetencies(
+                  this.languagesLabels,
+                  'languages',
+                  this.maxYears
+                )
+              "
+            ></radar>
+            <p class="is-size-7 is-italic">
+              Nombre d'années de pratique des principaux langages.
+            </p>
+          </div>
+          <div class="column">
+            <radar
+              unit=""
+              title="Langages : Maîtrise Technique"
+              :max="this.maxLevels"
+              :indicatorsNames="this.languagesLabels"
+              :scaleTranslation="this.competenciesTranslation"
+              :staticValues="this.studiedLanguages.map((v) => v.competency)"
+            ></radar>
+            <p class="is-size-7 is-italic">
+              Estimation du % de connaissance des principaux langages et de
+              leurs environnements.
+            </p>
+          </div>
+          <div class="column">
+            <radar
+              unit="ans"
+              title="Domaines : Années d'Expérience"
+              :max="this.maxYears"
+              :indicatorsNames="this.studiedDomains"
+              :staticValues="
+                this.valuesFromCompetencies(
+                  this.studiedDomains,
+                  'type_project',
+                  this.maxYears
+                )
+              "
+            ></radar>
+            <p class="is-size-7 is-italic">
+              Nombre d'années de pratique des principaux domaines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import { use } from "echarts/core";
-import { CanvasRenderer } from "echarts/renderers";
-import { RadarChart } from "echarts/charts";
-
-import {
-  TitleComponent,
-  TooltipComponent,
-  LegendComponent,
-} from "echarts/components";
-import VChart, { THEME_KEY } from "vue-echarts";
-
-use([
-  CanvasRenderer,
-  RadarChart,
-  TitleComponent,
-  TooltipComponent,
-  LegendComponent,
-]);
+import Radar from "../components/Echarts/Radar.vue";
+// dossier de compétence excell vers json https://beautifytools.com/excel-to-json-converter.php
+import { competencies } from "../assets/Data/Competences";
 
 export default {
-  name: "HelloWorld",
-  components: {
-    VChart,
-  },
-  provide: {
-    [THEME_KEY]: "vintage",
-  },
-
   data() {
     return {
-      option: {
-        color: ["#183051"],
-        backgroundColor: "rgba(255,238,255,1)",
-        title: {
-          text: "Années d'Expérience",
-          left: "center",
-        },
-        tooltip: {
-          transitionDuration: 0,
-          formatter: function () {
-            return "<div style='visibility: hidden;'> toto</div>";
-          },
-          position: this.toto,
-        },
-        scale: "true",
+      maxYears: 6,
+      maxLevels: 3,
 
-        radar: [
-          {
-            indicator: [
-              {
-                text: "Qt",
-                axisLabel: {
-                  show: true,
-                },
-              },
-              { text: "C++" },
-              { text: "C#" },
-            ],
+      studiedLanguages: [
+        { language: "C++", competency: (75 / 100) * 3 },
 
-            radius: 120,
-            startAngle: 90,
-            splitNumber: 4,
-            shape: "circle",
-            name: {
-              formatter: "【{value}】",
-              textStyle: {
-                color: "#428BD4",
-              },
-            },
+        { language: "SGBD Sql", competency: (90 / 100) * 3 },
 
-            axisLine: {
-              lineStyle: {
-                color: "#183051",
-              },
-            },
-            splitLine: {
-              lineStyle: {
-                color: "rgba(211, 253, 250, 0.8)",
-              },
-            },
-          },
-        ],
-        series: [
-          {
-            name: "xp",
-            type: "radar",
-            lineStyle: {
-              width: 4,
-            },
-            emphasis: {
-              focus: "self",
-              lineStyle: {
-                width: 5,
-              },
-            },
-            itemStyle: {
-              color: "rgba(255, 0, 0, 1)",
-              borderWidth: 6.5,
-              borderColor: "rgba(0, 0, 0, 1)",
-            },
-            tooltip: {
-              show: true,
-              trigger: "item",
-            },
+        { language: "PostGis", competency: (65 / 100) * 3 },
+        { language: "VueJs", competency: (75 / 100) * 3 },
+        { language: "C#", competency: (80 / 100) * 3 },
+      ],
 
-            data: [
-              {
-                value: [100, 8, 0.4],
-                name: "Data A",
-                symbolSize: 18,
-              },
-            ],
-          },
-        ],
-      },
+      studiedDomains: ["Web/Api", "TMA", "Mobile", "Algorithmie", "Logiciel"],
+      competenciesTranslation: { 1: "Débutant", 2: "Compétant", 3: "Expert" },
     };
   },
+  components: {
+    Radar,
+  },
+  computed: {
+    languagesLabels() {
+      return this.studiedLanguages.map((v) => v.language);
+    },
+  },
   methods: {
-    toto(mousePoint, params, dom, rectIn) {
-      var canvas = this.$refs.canvas;
-      var rect = canvas.childNodes[0].getBoundingClientRect();
-      let position = document
-        .querySelector("#centeredDiv")
-        .getBoundingClientRect();
+    // get number of month worked according to a languages,domains and ... in competencies file
+    // competencyLabels : values to get moth experience
+    //  competenceName : column  names (langages | domaines)
+    valuesFromCompetencies(competencyLabels, competenceName, max) {
+      var values = new Array();
 
-      // mouse in on radar Item
-      if (rectIn.width == rectIn.height) {
-        var centerX = position.x + rect.width * 0.5;
-        //  var centerY = position.y + rect.height * 0.5;
-
-        // compute angle from mouse position and center of figure
-        // get angle -pi:pi
-        var angle = Math.atan2(
-          mousePoint[0] - centerX,
-          rect.height * 0.5 - mousePoint[1]
+      for (var competencyItem in competencyLabels) {
+        // look fom compétences in data
+        var competencyLabel = competencyLabels[competencyItem];
+        var indicatorCompetencies = competencies.filter((competency) =>
+          competency[competenceName].includes(competencyLabel)
         );
 
-        // Translate to 0 pi
-        if (angle < 0) {
-          angle += Math.PI * 2;
-        }
-        // convert angle to index in array of data
-        var seriesLength = 3;
-        var index =
-          Math.round((angle / (Math.PI * 2)) * seriesLength) % seriesLength;
-
-        // displayValue
-        dom.textContent = params.value[index];
-        return { left: rectIn.x, top: rectIn.y };
-      } // mouse in on line
-      else {
-        dom.style.visibility = "hidden";
-        return { left: rectIn.x, top: rectIn.y };
+        // push values from data.js, from month to years and clamp to max
+        values.push(
+          Math.min(
+            max,
+            (
+              indicatorCompetencies.reduce(
+                (prev, next) => prev + parseInt(next.mois),
+                0
+              ) / 12.0
+            ).toFixed(1)
+          )
+        );
       }
+      return values;
     },
   },
 };
 </script>
-
-<style scoped>
-.chart {
-  height: 400px;
-}
-</style>

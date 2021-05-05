@@ -7,9 +7,11 @@
         src="../assets/fond_2.svg"
       />
     </div>
+
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container has-text-left">
+        <p class="title mt-5">Mon Parcours</p>
         <div class="media">
           <div class="media-left is-vbottom">
             <br />
@@ -94,14 +96,20 @@
             <p>
               Vous retrouverez mon parcours profesionnel détaillé dans mon
               <a :href="this.$store.state.dossierCompetencePath" target="blank">
-                Dossier de Compétences
+                <b-icon icon="download"> </b-icon>
+                <strong> Dossier de Compétences </strong>
+                <b-icon icon="download"> </b-icon>
               </a>
               (maj mai 2021). Je vous invite également à me suivre sur
-              <a :href="this.$store.state.linkedinPath" target="blank"
-                >Linkedin</a
-              >
+              <a :href="this.$store.state.linkedinPath" target="blank">
+                Linkedin
+                <b-icon icon="link-variant"> </b-icon>
+              </a>
               ou
-              <a :href="this.$store.state.maltPath" target="blank">Malt</a>
+              <a :href="this.$store.state.maltPath" target="blank"
+                >Malt
+                <b-icon icon="link-variant"> </b-icon>
+              </a>
               afin d'échanger directement ensemble.
             </p>
             <p>
@@ -110,8 +118,9 @@
             </p>
             <div class="buttons is-centered mt-2">
               <a class="button is-primary" href="#votre_besoin">
-                Comparez votre besion</a
-              >
+                Comparez à votre besion
+                <b-icon icon="steam" class="pl-5 mr-2"> </b-icon
+              ></a>
             </div>
           </div>
         </div>

@@ -92,6 +92,9 @@ export default {
                 text: "t",
               },
             ],
+            axisLabel: {
+              fontSize: 12,
+            },
 
             radius: 120,
             startAngle: 90,
@@ -117,7 +120,7 @@ export default {
             },
             splitArea: {
               areaStyle: {
-                color: ["#ff5858", "#ffe1e1"],
+                color: ["#ff8e8e", "#fef7f7"],
               },
             },
           },

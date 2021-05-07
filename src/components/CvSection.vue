@@ -9,7 +9,7 @@
     </div>
 
     <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
+    <div class="hero-body" style="display: block !important">
       <div class="container has-text-left">
         <p class="title mt-5">Mon Parcours</p>
         <div class="media">
@@ -116,7 +116,7 @@
               Les langages pratiqués sont nombreux, les principaux étant :
               <strong> C#, VueJs, C++, .Net Core et SQL</strong>.
             </p>
-            <div class="buttons is-centered mt-2">
+            <div class="buttons is-centered mt-2 mb-2">
               <a class="button is-primary" href="#votre_besoin">
                 Comparez à votre besion
                 <b-icon icon="steam" class="pl-5 mr-2"> </b-icon
@@ -124,11 +124,12 @@
             </div>
           </div>
         </div>
-        <div class="media">
-          <div class="media-content container">
-            <h3 class="title is-4 is-spaced bd-anchor-title">
-              <span class="bd-anchor-name">Clients</span>
-            </h3>
+
+        <div class="container border-media mt-4">
+          <h3 class="title is-4 is-spaced bd-anchor-title">
+            <span class="bd-anchor-name">Clients</span>
+          </h3>
+          <div>
             <b-carousel-list
               :data="itemReassurances"
               :arrow="false"

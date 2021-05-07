@@ -6,6 +6,8 @@ import Buefy from "buefy";
 import "buefy/dist/buefy.css";
 import "./styles/style.css";
 
+import "leaflet/dist/leaflet.css";
+
 Vue.use(Buefy);
 
 Vue.config.productionTip = false;

@@ -3,7 +3,7 @@
     <section id="intro">
       <introduction-section> </introduction-section>
     </section>
-    <section id="cv" class="hero is-fullheight has-background">
+    <section id="cv">
       <cv-section></cv-section>
     </section>
     <section id="votre_besoin" class="hero is-fullheight has-background">
@@ -26,22 +26,8 @@
         </div>
       </div>
     </section>
-    <section id="rse" class="hero is-fullheight has-background">
-      <!-- Hero content: will be in the middle -->
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <p class="title">Emmanuel Trivis - Freelance</p>
-          <p class="subtitle">Ingénierie et Développement Informatique</p>
-        </div>
-        <div class="container">
-          <img
-            alt="Vue logo"
-            :src="require('@/assets/meet_logo.png')"
-            width="256"
-            height="256"
-          />
-        </div>
-      </div>
+    <section id="rse">
+      <rse-section> </rse-section>
     </section>
   </div>
 </template>
@@ -50,11 +36,13 @@
 import IntroductionSection from "../components/IntroductionSection.vue";
 import CvSection from "../components/CvSection.vue";
 import YourNeedsSection from "../components/YourNeedsSection.vue";
+import RseSection from "../components/RseSection.vue";
 export default {
   components: {
     IntroductionSection,
     CvSection,
     YourNeedsSection,
+    RseSection,
   },
   data() {
     return {

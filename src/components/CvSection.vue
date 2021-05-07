@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hero is-fullheight has-background">
     <div class="hero-background">
       <img
         alt="présentation micro entreprise emmanuel Trivis"

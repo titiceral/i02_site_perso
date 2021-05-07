@@ -83,14 +83,13 @@
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <p class="heading">Agréé</p>
-            <p class="title">CII</p>
-            <p class="is-size-7 is-italic">
-              (20% de votre facture récupérable<a
+            <p class="heading">Le +</p>
+            <p class="title">
+              -20% € en CII<a
                 href="https://www.economie.gouv.fr/entreprises/credit-impot-innovation"
                 target="blank"
                 >*</a
-              >)
+              >
             </p>
           </div>
         </div>

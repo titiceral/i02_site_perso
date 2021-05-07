@@ -9,12 +9,20 @@
   width: 100%;
 
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 .img-hero {
   object-fit: fill;
   width: 100vw;
   height: 100vh;
+}
+
+.img-hero-cover {
+  object-fit: fill;
+  width: 100vw;
+
+  height: 100%;
+  opacity: 0.7;
 }
 
 .hero-background.is-transparent {
@@ -104,4 +112,12 @@ nav.navbar.is-fixed-top.is-active {
   animation-name: animateReassurence;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+.radar-sublegend {
+  margin-top: -2.5rem;
+}
+
+.border-media {
+  border-top: 1px solid rgba(219, 219, 219, 0.5);
 }

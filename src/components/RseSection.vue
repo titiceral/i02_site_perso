@@ -1,37 +1,42 @@
 <template>
   <div class="hero is-fullheight has-background">
-    <div class="hero-head">
-      <h1 class="title is-1">
-        Responsabilité Sociétale des d'Entreprises
-        <b-icon
-          icon="
-      bee"
-        ></b-icon>
-      </h1>
+    <div class="hero-background">
+      <img
+        alt="cibler votre besoin"
+        class="is-transparent img-hero-cover"
+        src="../assets/target_blue.jpg"
+      />
     </div>
     <div class="hero-body">
-      <div class="container">
+      <div class="container has-text-centered">
+        <p class="title mt-5">
+          Responsabilité Sociétale des d'Entreprises
+          <b-icon icon="bee"></b-icon>
+        </p>
         <p>
           La création de mon entreprise est portée par 2 élements cruciaux :
-          l'innovation et la pérennité.
+          l'<strong>innovation</strong> et la <strong>pérennité</strong>.
         </p>
-      </div>
-      <div class="container">
+
         <div class="columns">
-          <div class="column is-one-fifth"></div>
-          <div class="column">
-            <p class="subtitle is-3">Innovation</p>
+          <div class="column has-text-left">
+            <figure class="image is-128x128 is-rounded" style="margin: auto">
+              <light></light>
+            </figure>
+
+            <p class="subtitle is-4 has-text-centered">Innovation</p>
             <p>
-              Etre à l'écoute du Client, répondre à son besoin, innover ont
-              toujours été mes objectifs professionnels.
+              <strong>Satisfaction Client</strong> : Etre à l'écoute du Client,
+              répondre à son besoin, innover ont toujours été mes objectifs
+              professionnels.
             </p>
             <p>
-              Concrétisation : L'obtention du crédit import innovation, suite à
-              la soumission d'un de mes projets.
+              <strong>Concrétisation</strong> : L'obtention du crédit impôt
+              innovation suite à la soumission d'un de mes projets.
             </p>
             <p>
-              Vieille technologique : Etre à l'écoute des nouvautés. Etre libre
-              de se former
+              <strong>Vieille technologique</strong> : Etre à l'écoute des
+              nouvautés. Etre libre de se former
               <b-tooltip>
                 <template v-slot:content>
                   <li>
@@ -48,33 +53,37 @@
               >.
             </p>
             <p>
-              Plaisir : Etre présent de l'appel d'offre jusqu'à la recette
-              finale.
+              <strong>Plaisir</strong> : Etre présent de l'appel d'offre jusqu'à
+              la recette finale.
             </p>
           </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="columns">
-          <div class="column is-one-fifth"></div>
-          <div class="column">
-            <p class="subtitle is-3">Pérennité</p>
+
+          <div class="column has-text-left">
+            <figure class="image is-128x128 is-rounded" style="margin: auto">
+              <flower></flower>
+            </figure>
+            <p class="subtitle is-4 has-text-centered">Pérennité</p>
             <p>
-              L'avenir dépendra de notre environnement, de notre capacité à le
-              préserver et le restaurer.
+              <strong>Pérenniser</strong> mes interventions clients mais aussi
+              l'avenir de Tous.
             </p>
             <p>
-              10% du CA net est réinvestit dans des financements participatifs
-              pour le croissance verte : projets locaux, centrale
-              photovoltaïque, valorisation des déchets, efficacité
-              energétique...
+              L'<strong>avenir</strong> est lié de notre environnement, à notre
+              capacité à le préserver et le restaurer.
             </p>
             <p>
-              Démarche de responsable : Fournisseur Vert, Démarches au
-              quotidient, Développement responsable...
+              <strong>10% du CA net</strong> est réinvestit dans des
+              financements participatifs pour le croissance verte : projets
+              locaux, centrale photovoltaïque, valorisation des déchets,
+              efficacité energétique...
             </p>
             <p>
-              Veille Ecologique : Comprendre les enjeux et comment y répondre.*
+              <strong>Démarche de responsable</strong> : Fournisseur Vert,
+              Démarches au quotidient, Développement responsable...
+            </p>
+            <p>
+              <strong>Veille Ecologique</strong> : Comprendre les enjeux et
+              comment y répondre.*
             </p>
           </div>
         </div>
@@ -84,10 +93,13 @@
 </template>
 
 <script>
+import light from "./SVGs/light.vue";
+import flower from "./SVGs/flower.vue";
 export default {
+  components: { light, flower },
   data() {
     return {
-      veilleTechnologique: "",
+      veilleTechnologiques: "",
       veilleEcologique: [
         {
           year: "2021",

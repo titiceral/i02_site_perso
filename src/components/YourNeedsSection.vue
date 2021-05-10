@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hero is-fullheight has-background">
     <div class="hero-background">
       <img
         alt="cibler votre besoin"
@@ -16,7 +16,7 @@
           </a>
         </p>
         <div class="columns has-text-centered">
-          <div class="column">
+          <div class="column has-text-centered">
             <radar
               unit="ans"
               title="Langages : Années d'Expérience"
@@ -79,7 +79,12 @@
           </div>
           <div class="column is-8">
             <div style="height: 40vh">
-              <l-map :zoom="zoom" :center="center" :fadeAnimation="false">
+              <l-map
+                :zoom="zoom"
+                :center="center"
+                :fadeAnimation="false"
+                :options="{ scrollWheelZoom: false }"
+              >
                 <l-tile-layer :url="url"></l-tile-layer>
                 <l-circle
                   :lat-lng="center"

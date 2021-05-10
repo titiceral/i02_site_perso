@@ -121,3 +121,8 @@ nav.navbar.is-fixed-top.is-active {
 .border-media {
   border-top: 1px solid rgba(219, 219, 219, 0.5);
 }
+
+.rseImage {
+  border-radius: 50%;
+  background-color: red;
+}

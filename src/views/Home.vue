@@ -6,25 +6,8 @@
     <section id="cv">
       <cv-section></cv-section>
     </section>
-    <section id="votre_besoin" class="hero is-fullheight has-background">
+    <section id="votre_besoin">
       <your-needs-section> </your-needs-section>
-    </section>
-    <section id="cv" class="hero is-fullheight has-background">
-      <!-- Hero content: will be in the middle -->
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <p class="title">Emmanuel Trivis - Freelance</p>
-          <p class="subtitle">Ingénierie et Développement Informatique</p>
-        </div>
-        <div class="container">
-          <img
-            alt="Vue logo"
-            :src="require('@/assets/meet_logo.png')"
-            width="256"
-            height="256"
-          />
-        </div>
-      </div>
     </section>
     <section id="rse">
       <rse-section> </rse-section>

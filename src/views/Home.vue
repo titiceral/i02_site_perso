@@ -12,6 +12,12 @@
     <section id="rse">
       <rse-section> </rse-section>
     </section>
+
+    <footer class="footer">
+      <div class="has-text-centered">
+        <p><small> Emmanuel Trivis avec VueJs & Buefy - 2021</small></p>
+      </div>
+    </footer>
   </div>
 </template>
 

@@ -4,27 +4,27 @@
       <img
         alt="cibler votre besoin"
         class="is-transparent img-hero-cover"
-        src="../assets/target_blue.jpg"
+        src="../assets/rse_back.png"
       />
     </div>
     <div class="hero-body">
-      <div class="container has-text-centered">
-        <p class="title mt-5">
+      <div class="container has-text-left" style="display: block !important">
+        <p class="title m-5">
           Responsabilité Sociétale des d'Entreprises
           <b-icon icon="bee"></b-icon>
         </p>
-        <p>
+        <p class="container has-text-centered">
           La création de mon entreprise est portée par 2 élements cruciaux :
           l'<strong>innovation</strong> et la <strong>pérennité</strong>.
         </p>
 
-        <div class="columns">
+        <div class="columns mt-5" style="display: flex !important">
           <div class="column has-text-left">
             <figure class="image is-128x128 is-rounded" style="margin: auto">
               <light></light>
             </figure>
 
-            <p class="subtitle is-4 has-text-centered">Innovation</p>
+            <p class="subtitle is-4 has-text-centered mt-2">Innovation</p>
             <p>
               <strong>Satisfaction Client</strong> : Etre à l'écoute du Client,
               répondre à son besoin, innover ont toujours été mes objectifs
@@ -62,7 +62,7 @@
             <figure class="image is-128x128 is-rounded" style="margin: auto">
               <flower></flower>
             </figure>
-            <p class="subtitle is-4 has-text-centered">Pérennité</p>
+            <p class="subtitle is-4 has-text-centered mt-2">Pérennité</p>
             <p>
               <strong>Pérenniser</strong> mes interventions clients mais aussi
               l'avenir de Tous.

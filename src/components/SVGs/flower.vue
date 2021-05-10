@@ -2,7 +2,7 @@
   <div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="-5 5 110 110"
+      viewBox="-10 0 120 120"
       class="rseImage"
     >
       <defs>

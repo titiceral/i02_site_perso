@@ -124,5 +124,14 @@ nav.navbar.is-fixed-top.is-active {
 
 .rseImage {
   border-radius: 50%;
-  background-color: red;
+  background-color: #9fb7ff;
+  color: #ff5959;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.footer {
+  padding: 1px !important;
+  background-color: lightgrey !important;
 }

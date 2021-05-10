@@ -3,8 +3,8 @@
     <div class="hero-background">
       <img
         alt="présentation micro entreprise emmanuel Trivis"
-        class="is-transparent img-hero"
-        src="../assets/fond_2.svg"
+        class="is-transparent img-hero-cover"
+        src="../assets/cv_back.png"
       />
     </div>
 

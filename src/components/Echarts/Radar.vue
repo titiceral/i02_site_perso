@@ -250,5 +250,6 @@ export default {
 <style scoped>
 .chart {
   height: 400px;
+  margin: auto;
 }
 </style>

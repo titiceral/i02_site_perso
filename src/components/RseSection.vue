@@ -37,20 +37,10 @@
             <p>
               <strong>Vieille technologique</strong> : Etre à l'écoute des
               nouvautés. Etre libre de se former
-              <b-tooltip>
-                <template v-slot:content>
-                  <li>
-                    <ul v-for="item in veilleTechnologiques" :key="item.year">
-                      {{
-                        item.year
-                      }}
-                      :
-                      <a :href="item.link"> {{ item.label }}</a>
-                    </ul>
-                  </li>
-                </template>
-                *</b-tooltip
-              >.
+              <tool-tip-watch
+                :watches="this.veilleTechnologiques"
+              ></tool-tip-watch>
+              .
             </p>
             <p>
               <strong>Plaisir</strong> : Etre présent de l'appel d'offre jusqu'à
@@ -73,17 +63,18 @@
             </p>
             <p>
               <strong>10% du CA net</strong> est réinvestit dans des
-              financements participatifs pour le croissance verte : projets
+              financements participatifs pour la croissance verte : projets
               locaux, centrale photovoltaïque, valorisation des déchets,
               efficacité energétique...
             </p>
             <p>
               <strong>Démarche de responsable</strong> : Fournisseur Vert,
-              Démarches au quotidient, Développement responsable...
+              Démarches au quotidient, Production responsable...
             </p>
             <p>
               <strong>Veille Ecologique</strong> : Comprendre les enjeux et
-              comment y répondre.*
+              comment y répondre.
+              <tool-tip-watch :watches="veilleEcologique"></tool-tip-watch>
             </p>
           </div>
         </div>
@@ -95,17 +86,109 @@
 <script>
 import light from "./SVGs/light.vue";
 import flower from "./SVGs/flower.vue";
+import ToolTipWatch from "./Base/toolTipWatch.vue";
 export default {
-  components: { light, flower },
+  components: { light, flower, ToolTipWatch },
   data() {
     return {
-      veilleTechnologiques: "",
+      veilleTechnologiques: [
+        {
+          year: "03-2020",
+          label: "Complete TypeScript For Beginners",
+          link:
+            "https://www.udemy.com/course/typescript-fundamentals/learn/lecture/9887978?start=0#overview",
+          format: "Cours",
+          producer: "Udemy",
+          duration: "5h30",
+        },
+        {
+          year: "04-2020",
+          label:
+            "Les usages de la réalité virtuelle et augmentée dans l'industrie ",
+          link: "https://www.youtube.com/watch?v=ch8cAU7ZCcI",
+          format: "Webinar",
+          producer: "Clarté",
+          duration: "1h",
+        },
+        {
+          year: "05-2020",
+          label:
+            "Les containers Docker vus par un chef cuisinier et un mécanicien ",
+          link: "https://www.youtube.com/watch?v=r0uzNOOmmvg",
+          format: "Webinar",
+          producer: "Malt Academy - Rachid Zarouali",
+          duration: "2h",
+        },
+        {
+          year: "05-2020",
+          label: "DevOps : les outils ",
+          link: "https://www.youtube.com/watch?v=Wao-E1v1IXU",
+          format: "Webinar",
+          producer: "Malt Academy - Guillaume Rémy",
+          duration: "1h30",
+        },
+        {
+          year: "04-2021",
+          label: "Webinar Cloud Experts Continuous delivery in Azure DevOps",
+          link:
+            "https://event.on24.com/eventRegistration/console/EventConsoleApollo.jsp?simulive=y&eventid=2298862&sessionid=1&username=&partnerref=&format=fhvideo1&mobile=&flashsupportedmobiledevice=&helpcenter=&key=853747D9A816CBE8B533711749AE6B80&newConsole=true&nxChe=true&newTabCon=true&consoleEarEventConsole=false&text_language_id=fr&playerwidth=748&playerheight=526&eventuserid=424398194&contenttype=A&mediametricsessionid=379125427&mediametricid=3248110&usercd=424398194&mode=launch",
+          format: "Webinar",
+          producer: "Microsoft",
+          duration: "2h30",
+        },
+        {
+          year: "04-2021",
+          label: "Initiation à la GTB",
+          link: "https://www.distech-controls.com/",
+          format: "Présentation",
+          producer: "Distech Controls",
+          duration: "1h",
+        },
+        {
+          year: "04-2021",
+          label: "Tout sur le langage Go",
+          link:
+            "https://app.livestorm.co/comet-4/langage-go/live?s=2089ef8b-5e95-43cb-b849-45866d7b1e66#/chat",
+          format: "Webinar",
+          duration: "1h",
+          producer: "Comet-Maximilien Andile",
+        },
+        {
+          year: "06-2021",
+          label:
+            "Microsoft Azure Virtual Training Day : Notions de base sur l’IA ",
+          link:
+            "https://event.on24.com/eventRegistration/EventLobbyServlet?target=lobby20.jsp&eventid=3086914&sessionid=1&key=62D05B9E2AC75D49D961862E066594B3&eventuserid=432203490",
+          format: "Webinar",
+          duration: "3h",
+          producer: "Microsoft",
+        },
+        {
+          year: "2020-2021",
+          label: "Formation VueJs ",
+          link: "https://www.vuemastery.com/",
+          format: "Formation",
+          duration: "20+h",
+          producer: "vuemastery",
+        },
+      ],
       veilleEcologique: [
         {
-          year: "2021",
+          year: "06-2021",
           label: "Fun Mooc : Comprendre la gestion Forestière",
           link:
             "https://lms.fun-mooc.fr/courses/course-v1:AgroParisTech+32006+session01/info",
+          format: "MOOC",
+          producer: "AgroParisTech",
+          duration: "24+h",
+        },
+        {
+          year: "2021",
+          label: "Les Mardis verts de Greenpeace",
+          link: "https://www.greenpeace.fr/mardis-verts/",
+          format: "Newsletter",
+          producer: "Greenpeace",
+          duration: "1h/semaine",
         },
       ],
     };

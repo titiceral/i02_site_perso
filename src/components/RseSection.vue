@@ -80,6 +80,11 @@
         </div>
       </div>
     </div>
+    <footer class="footer is-active">
+      <div class="has-text-centered">
+        <p><small> Emmanuel Trivis avec VueJs & Buefy - 2021</small></p>
+      </div>
+    </footer>
   </div>
 </template>
 

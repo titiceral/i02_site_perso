@@ -98,6 +98,22 @@
         </div>
       </div>
     </div>
+    <div class="hero-footer has-text-right">
+      Photo by
+      <a
+        href="https://unsplash.com/@possessedphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        rel="nofollow"
+        target="blank"
+        >Possessed Photography</a
+      >
+      on
+      <a
+        href="https://unsplash.com/s/photos/target?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        rel="nofollow"
+        target="blank"
+        >Unsplash</a
+      >
+    </div>
   </div>
 </template>
 

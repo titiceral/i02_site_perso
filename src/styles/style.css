@@ -48,10 +48,10 @@ nav.navbar.is-fixed-top {
   background-color: #d1eef9;
 }
 
+.footer.is-active,
 nav.navbar.is-fixed-top.is-active {
   transition: background-color 1s, backdrop-filter 0.25s ease-out;
   backdrop-filter: blur(10px);
-  background-color: transparent;
 }
 
 .is-primary {
@@ -133,5 +133,11 @@ nav.navbar.is-fixed-top.is-active {
 
 .footer {
   padding: 1px !important;
-  background-color: lightgrey !important;
+  background-color: #ffffff77;
+}
+
+.hero-footer {
+  font-size: 10px;
+  pointer-events: auto;
+  z-index: 1;
 }

@@ -144,6 +144,29 @@
         </div>
       </div>
     </div>
+    <div class="hero-footer has-text-right">
+      Photo by
+      <a
+        href="https://unsplash.com/@amyshamblen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        target="blank"
+        rel="nofollow"
+        >Amy Shamblen</a
+      >
+      and
+      <a
+        href="https://unsplash.com/@hoanvokim?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        target="blank"
+        rel="nofollow"
+        >Harris Vo</a
+      >
+      on
+      <a
+        href="https://unsplash.com/s/photos/gift?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        target="blank"
+        rel="nofollow"
+        >Unsplash</a
+      >
+    </div>
   </div>
 </template>
 

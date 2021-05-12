@@ -1,4 +1,4 @@
-# i02_site_perso
+# Site Vitrine Micro Entreprise Emmanuel Trivis
 
 ## Project setup
 ```

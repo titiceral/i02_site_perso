@@ -1,6 +1,6 @@
 # Site Vitrine Micro Entreprise Emmanuel Trivis
 
-![Section introdution](./README/images/introdution_section.png)
+![Section introdution](./README/images/introduction_section.png)
 ![Section Votre Besoin](./README/images/yourneeds_section.png)
 
 ## Description
